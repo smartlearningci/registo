@@ -92,6 +92,7 @@
     <!-- Script code to call the Azure Function Microservice -->
     <script>
         function escreveInformacacoes() {
+            console.log("informacoes...")
             var nome = document.getElementById("nome").value
             var dtnascimento = document.getElementById("dtnascimento").value
             var generos = document.getElementById("generos")
@@ -99,20 +100,7 @@
             var classes = document.getElementById("classes")
             var classe = classes.options[classes.selectedIndex].text
             var codigo = document.getElementById("codigo").value
-            axios({
-                method: "post",
-                url: "/api/gravaRegisto",
-                data: {
-                    "PartitionKey": "registo",
-                    "RowKey": nome
-                }
-            })
-                .then(response => {
-                    document.getElementById("message").innerHTML = "Saved Successful"
-                })
-                .catch(error => {
-                    document.getElementById("message").innerHTML = "It was not possible to save!"
-                })
+            
         }
     </script>
     <!-- Axios Lib-->
