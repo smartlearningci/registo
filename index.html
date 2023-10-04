@@ -34,7 +34,7 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title">Registo de informações</h2>
-                    <form method="POST">
+                    <div>
                         <div class="input-group">
                             <input class="input--style-1" type="text" placeholder="Nome" name="nome" id="nome">
                         </div>
@@ -84,7 +84,7 @@
                                 onclick="escreveInformacacoes()">Submeter</button>
                                 
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,10 +103,13 @@
             var codigo = document.getElementById("codigo").value
             axios({
                 method: "post",
-                url: "/api/gravaRegisto",
+                url: "/api/<your-function-name-here>",
                 data: {
-                    "PartitionKey": "registo",
-                    "RowKey": nome
+                    "PartitionKey": "registo de informações",
+                    "RowKey": nome,
+                    "dtnascimento": dtnascimento,
+                    "classe": classe,
+                    "codigo": codigo
                 }
             })
                 .then(response => {
