@@ -125,10 +125,10 @@
                 }
             })
                 .then(response => {
-                    document.getElementById("message").innerHTML = "Saved Successful"
+                    document.getElementById("message").innerHTML = "Operação realizada com sucesso"
                 })
                 .catch(error => {
-                    document.getElementById("message").innerHTML = "It was not possible to save!"
+                    document.getElementById("message").innerHTML = "Algo ocorreu de errado. Provavelmente tentou inserir um registo com o mesmo nome..."
                 })
         }
     </script>
