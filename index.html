@@ -95,12 +95,18 @@
         function escreveInformacacoes() {
             console.log("informacoes...")
             var nome = document.getElementById("nome").value
+            console.log("nome " + nome)
             var dtnascimento = document.getElementById("dtnascimento").value
+            console.log("dt " + dtnascimento)
             var generos = document.getElementById("generos")
             var genero = generos.options[generos.selectedIndex].text
+            console.log("genero " + genero)
             var classes = document.getElementById("classes")
             var classe = classes.options[classes.selectedIndex].text
+            console.log("classe " + classe)
             var codigo = document.getElementById("codigo").value
+            console.log("codigo " + codigo)
+            
             axios({
                 method: "post",
                 url: "/api/<your-function-name-here>",
