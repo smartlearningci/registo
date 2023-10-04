@@ -104,11 +104,7 @@
                 url: "/api/gravaRegisto",
                 data: {
                     "PartitionKey": "registo",
-                    "RowKey": nome,
-                    "genero": genero,
-                    "dtnascimento": dtnascimento,
-                    "classe": classe,
-                    "codigo": codigo
+                    "RowKey": nome
                 }
             })
                 .then(response => {
